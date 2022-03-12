@@ -1,15 +1,18 @@
 body {
     background-color: var(--primary-color);
+    color: var(--text-color2);
 }
 .subtitle {
     font-family: 'Syne Mono', monospace;
     color: var(--text-color);
     text-align: center;
 }
-.carrousel-img {
+.game-img {
+    background-color: white;
     width: 100vw;
     height: 240px;
-    object-fit: cover;
+    /* object-fit: cover; */
+    opacity: 0.5;
 
 }
 .main-content{

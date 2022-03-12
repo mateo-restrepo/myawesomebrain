@@ -8,8 +8,6 @@ html {
     font-size: 62.5%;
 }
 body {
-    background-color: var(--text-color1);
-    color: var(--text-color2);
     font-family: 'Hubballi', cursive;
     font-size: 2rem;
 }
