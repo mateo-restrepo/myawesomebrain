@@ -13,7 +13,14 @@ body {
     font-family: 'Hubballi', cursive;
     font-size: 2rem;
 }
-
+.title {
+    font-family: 'Syne Mono', monospace;
+    color: var(--text-color);
+    margin-right: 8px;
+}
+.title:hover{
+    color: var(--secondary-color);
+}
 /* Estilos para el header */
 
 .left-section a, .right-section a {

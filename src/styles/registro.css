@@ -1,0 +1,19 @@
+.main-container {
+    display: grid;
+    width: 100vw;
+    height: 90vh;
+    place-items: center;
+}
+.main-content {
+    min-width: 300px;
+    max-width: 440px;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.2);
+    background-color: #fff;
+}
+.avatar {
+    width: 60px;
+    align-self: center;
+}
