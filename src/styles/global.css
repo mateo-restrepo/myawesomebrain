@@ -8,7 +8,56 @@ html {
     font-size: 62.5%;
 }
 body {
+    background-color: var(--text-color1);
     color: var(--text-color2);
     font-family: 'Hubballi', cursive;
     font-size: 2rem;
+}
+
+/* Estilos para el header */
+
+.left-section a, .right-section a {
+    color: white;
+}
+.left-section a:hover, .right-section a:hover {
+    color: var(--text-color);
+}
+
+.nav-container a {
+    margin-right: 4px;
+}
+/* Estilos para el footer */
+
+footer {
+    background-color: var(--secondary-color);
+}
+.footer-container {
+    display: flex;
+    padding: 24px 0;
+}
+.footer-container ul {
+    display: inherit;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.footer-container ul li a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+}
+.footer-container ul li a:hover{
+    color: var(--text-color);
+}
+.footer-container ul li::after{
+    content: "|";
+    padding: 8px;
+}
+.footer-container ul li:nth-child(2):after{
+    content: "";
+}
+@media(max-width:540px){
+    .nav-container div {
+        display: flex;
+        flex-direction: column;
+    }
 }
