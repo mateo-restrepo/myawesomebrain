@@ -1,0 +1,65 @@
+body {
+    background-color: var(--primary-color);
+}
+.title {
+    font-family: 'Syne Mono', monospace;
+    color: var(--text-color);
+    margin-right: 8px;
+}
+.subtitle {
+    font-family: 'Syne Mono', monospace;
+    color: var(--text-color);
+    text-align: center;
+}
+.carrousel-img {
+    width: 100vw;
+    height: 240px;
+    object-fit: cover;
+
+}
+.main-content{
+    justify-content: center;
+}
+.add-container{
+    background: white;
+}
+/* Estilos para el header */
+
+.left-section a, .right-section a {
+    color: white;
+}
+.left-section a:hover, .right-section a:hover {
+    color: var(--text-color);
+}
+.nav-container a {
+    margin-right: 8px;
+}
+/* Estilos para el footer */
+
+footer {
+    background-color: var(--secondary-color);
+}
+.footer-container {
+    display: flex;
+    padding: 24px 0;
+}
+.footer-container ul {
+    display: inherit;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.footer-container ul li a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+}
+.footer-container ul li a:hover{
+    color: var(--text-color);
+}
+.footer-container ul li::after{
+    content: "|";
+    padding: 8px;
+}
+.footer-container ul li:nth-child(2):after{
+    content: "";
+}

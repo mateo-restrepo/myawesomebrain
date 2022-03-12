@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #062C30;
+    --secondary-color: #05595B;
+    --text-color: #E2D784;
+    --text-color2: #F5F5F5;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    color: var(--text-color2);
+    font-family: 'Hubballi', cursive;
+    font-size: 2rem;
+}
