@@ -1,3 +1,7 @@
 body {
     background-color: var(--text-color2);
 }
+.game-img {
+    object-fit: cover;
+    border-radius: 50%;
+}
