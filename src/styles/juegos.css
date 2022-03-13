@@ -1,6 +1,12 @@
 body {
     background-color: var(--text-color2);
 }
+.games-container {
+    min-height: 75vh;
+}
+.games-container > div {
+    margin-bottom: 32px;
+}
 .game-img {
     object-fit: cover;
     border-radius: 50%;

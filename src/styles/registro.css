@@ -5,8 +5,7 @@
     place-items: center;
 }
 .main-content {
-    min-width: 300px;
-    max-width: 440px;
+    max-width: 360px;
     padding: 12px;
     margin: 10px;
     border-radius: 12px;
@@ -14,7 +13,7 @@
     background-color: #fff;
 }
 .avatar {
-    width: 60px;
-    margin: 20px;
+    width: 40px;
+    margin: 8px;
     align-self: center;
 }

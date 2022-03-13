@@ -1,0 +1,16 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+}
+.game {
+    max-width: 600px;
+    align-self: center;
+}
+.game img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+}
+.game-category {
+    margin-left: 8px;
+}

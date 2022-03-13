@@ -45,6 +45,11 @@
         <form class="form d-flex flex-column">
           <img src="../src/assets/icons/person.svg" alt="user icon" class="avatar">
           <div class="mb-3">
+            <label for="nickname" class="form-label text-dark">Nickname</label>
+            <input type="text" class="form-control fs-3" name="nickname" id="nickname"
+              placeholder="tunombre34" title="Elige tu apodo" required>
+          </div>
+          <div class="mb-3">
             <label for="emailInput" class="form-label text-dark">Correo electrónico</label>
             <input type="email" class="form-control fs-3" name="email" id="emailInput"
               placeholder="tucorreo@example.com" title="Digita tu correo electrónico" required>
@@ -53,8 +58,8 @@
             <label for="inputPasswword" class="form-label text-dark" required>Contraseña</label>
             <input type="password" class="form-control fs-3" id="inputPasswword" aria-describedby="passwordHelp"
               placeholder="********" title="Digita una constraseña">
-            <div id="passwordHelp" class="form-text fs-4">Debe ser de mínimo 8 carácteres y tener al menos una
-              mayúscula, minúscula, un número y un caracter especial(*,#,?,/)</div>
+            <div id="passwordHelp" class="form-text fs-4">Mínimo de 8 carácteres, con mínimo una
+              mayúscula, minúscula, un número y un caracter especial(*,#,?,/ ...)</div>
             <label for="repeatPasswword" class="form-label text-dark">Confirmar contraseña</label>
             <input type="password" class="form-control fs-3" id="repeatPasswword" title="Repite tu constraseña"
               placeholder="********" required>

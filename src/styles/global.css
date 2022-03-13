@@ -27,7 +27,6 @@ body {
 .left-section a:hover, .right-section a:hover {
     color: var(--text-color);
 }
-
 .nav-container a {
     margin-right: 4px;
 }
