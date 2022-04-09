@@ -4,3 +4,12 @@ const helpMenu = () => {
     }, 6000)
 }
 
+const greeting = (nickname) => {
+    document.getElementById('greeting').innerHTML = `Hola, <span class="nickname">${nickname}</span>`;
+}
+if(localStorage.nickname){
+    greeting(localStorage.nickname)
+}
+
+
+
