@@ -1,9 +1,9 @@
-let players = JSON.parse(localStorage.getItem('players'));
-let email = document.getElementById('emailInput');
-let passw = document.getElementById('inputPassword');
 let mes1 = document.getElementById('mes1');
 
 const authenticatePlayer = () => {
+    const players = JSON.parse(localStorage.getItem('players'));
+    const email = document.getElementById('emailInput');
+    const passw = document.getElementById('inputPassword');
     for(player of players){
         if(player.email == email.value){
             if(player.password == passw.value){

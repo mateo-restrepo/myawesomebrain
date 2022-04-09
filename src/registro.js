@@ -1,6 +1,5 @@
-let password1, password2, pwMatch =  false;
+let pwMatch =  false;
 let pwMessage = document.getElementById('pw-message');
-let players;
 
 class Player{
     constructor(nickname, email, password){
@@ -10,17 +9,10 @@ class Player{
     }
 }
 
-if(localStorage.players){
-    players = JSON.parse(localStorage.getItem('players'));
-}else{
-    players = [];
-}
-
-
 // Función para confirmar Contraseña 
 function comparePasswords(){
-    password1 = document.getElementById('inputPassword').value;
-    password2 = document.getElementById('repeatPassword').value;
+    const password1 = document.getElementById('inputPassword').value;
+    const password2 = document.getElementById('repeatPassword').value;
     if(password1.length > 0 || password2.length > 0){
         if(password1 != password2 ){
             pwMatch = false;
@@ -35,22 +27,58 @@ function comparePasswords(){
     }
 }
 
+function isLen8(word){
+    if(word.length >= 8){
+        return true
+    }
+    else{
+        return false
+    }
+}
+
 // Simulador Registro de Usuario
 
 function confirmSending(){
     if(pwMatch){
+        let players = [];
+        if(localStorage.players){
+            players = JSON.parse(localStorage.getItem('players'));
+        }else{
+            players = [];
+        }
         const nickname = document.getElementById('nickname').value;
         const email = document.getElementById('emailInput').value;
         const passw = document.getElementById('inputPassword').value;
-        if(nickname && email){
-            const player = new Player(nickname, email, passw);
-            players.push(player);
-            localStorage.players = JSON.stringify(players);
-            localStorage.nickname = player.nickname;
-            window.location.href = 'http://127.0.0.1:5500/public/';
+        const validPassw = isLen8(passw);
+        let repeated = false;
+        if(nickname && email && validPassw){
+            if(players.length > 0){
+                for(player of players){
+                    if(player.nickname == nickname){
+                        pwMessage.innerHTML = 'nickname no disponible';
+                        repeated = true;
+                        break;
+                    }
+                    else if(player.email == email){
+                        pwMessage.innerHTML = 'Intenta con otro correo electrónico';
+                        repeated = true;
+                        break;
+                    } 
+                }
+            } 
+            if(!repeated){
+                const player = new Player(nickname, email, passw);
+                players.push(player);
+                localStorage.players = JSON.stringify(players);
+                localStorage.nickname = player.nickname;
+                window.location.href = 'http://127.0.0.1:5500/public/';
+            }          
+        } else{
+            if(!validPassw){
+                pwMessage.innerHTML = '*La contraseña debe tener mínimo 8 carácteres'
+            } else {
+                pwMessage.innerHTML = '*Asegúrate de completar los campos'
+            }
         }
-    }
-    else{
-        alert('El registro no se completó correctamente. Registra todos los campos y asegúrate de que las contraseñas coincidan')
     }
 }     
