@@ -10,7 +10,7 @@ const authenticatePlayer = () => {
                 console.log('pass bien');
                 mes1.style.display = 'none';
                 localStorage.nickname = player.nickname;
-                window.location.href = 'http://127.0.0.1:5500/public/';
+                window.location.href = 'https://mateo-restrepo.github.io/myawesomemind/index.html';
             }
             break;
         }

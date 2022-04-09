@@ -9,12 +9,16 @@ html {
 }
 body {
     font-family: 'Hubballi', cursive;
-    font-size: 2rem;
+    font-size: 2.4rem;
 }
 .title {
     font-family: 'Syne Mono', monospace;
+    font-size: 3.2rem;
     color: var(--text-color);
     margin-right: 8px;
+}
+.subtitle {
+    font-size: 2.8rem;
 }
 .title:hover{
     color: var(--secondary-color);
@@ -46,7 +50,6 @@ footer {
 }
 .footer-container ul li a{
     text-decoration: none;
-    font-size: 2rem;
     color: white;
 }
 .footer-container ul li a:hover{
