@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -14,12 +14,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Syne+Mono&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="helpMenu()">
   <section class="container--fluid">
     <div class="ad-container text-center">
       <h5 class="text-muted">Aprende más rápido y mejora tu vida (este es un ejemplo de anuncio)</h5>
       <div>
-        <a href="#"><img src="" alt="anuncio"></a>
+        <a href="#"><img src="#" alt="anuncio"></a>
       </div>
       <p class="text-muted fs-5 mb-0">*Al dar click en el anuncio serás redirigido a otro sitio web.</p>
     </div>
@@ -44,6 +44,7 @@
           data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" title="Menu"></span>
+          
         </button>
         <h1 title="Inicio"><a href="./index.html" class="text-decoration-none title">MyAwesomeBrain</a></h1>
       </div>
@@ -51,7 +52,9 @@
   </header>
   <main>
     <div class="main-container">
-
+      <div id="help-menu">
+        <p>Desde <img src="../src/assets/icons/list.svg" alt="list icon"> puedes explorar el menú de opciones</p>
+      </div>
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -141,5 +144,6 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="../src/index.js"></script>
 </body>
 </html>

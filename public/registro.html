@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -40,7 +40,7 @@
     </nav>
   </header>
   <main>
-    <section class="main-container">
+    <div class="main-container">
       <div class="mr-4 main-content">
         <form class="form d-flex flex-column">
           <img src="../src/assets/icons/person.svg" alt="user icon" class="avatar">
@@ -55,14 +55,15 @@
               placeholder="tucorreo@example.com" title="Digita tu correo electrónico" required>
           </div>
           <div class="mb-3">
-            <label for="inputPasswword" class="form-label text-dark" required>Contraseña</label>
+            <label for="inputPasswword" class="form-label text-dark">Contraseña</label>
             <input type="password" class="form-control fs-3" id="inputPasswword" aria-describedby="passwordHelp"
-              placeholder="********" title="Digita una constraseña">
+              placeholder="********" title="Digita una constraseña" required onkeyup="comparePasswords()">
             <div id="passwordHelp" class="form-text fs-4">Mínimo de 8 carácteres, con mínimo una
               mayúscula, minúscula, un número y un caracter especial(*,#,?,/ ...)</div>
             <label for="repeatPasswword" class="form-label text-dark">Confirmar contraseña</label>
             <input type="password" class="form-control fs-3" id="repeatPasswword" title="Repite tu constraseña"
-              placeholder="********" required>
+              placeholder="********" required onkeyup="comparePasswords()">
+            <p id="pw-message"></p>
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" name="acept-conditions" id="termsCheck"
@@ -70,11 +71,12 @@
             <label class="form-check-label" for="termsCheck"><a href="" class="fs-4 text-decoration-none">Aceptas
                 nuestros términos y condiciones</a></label>
           </div>
-          <button type="submit" class="btn btn-primary fs-3 mt-3" title="Crear Cuenta">Crear cuenta</button>
+          <button type="submit" class="btn btn-primary fs-3 mt-3" title="Crear Cuenta" onclick="confirmSending()">Crear cuenta</button>
         </form>
       </div>
-    </section>
+    </div>
   </main>
+  <script src="../src/registro.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

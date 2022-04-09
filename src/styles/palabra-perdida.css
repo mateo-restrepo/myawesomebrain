@@ -14,3 +14,14 @@
 .game-category {
     margin-left: 8px;
 }
+.clasification-table {
+    margin: 28px auto;
+}
+tr{
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+}
+th, td {
+    padding: 8px;
+}
