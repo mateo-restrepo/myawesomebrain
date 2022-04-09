@@ -69,7 +69,7 @@ function confirmSending(){
                 players.push(player);
                 localStorage.players = JSON.stringify(players);
                 localStorage.nickname = player.nickname;
-                window.location.href = 'https://mateo-restrepo.github.io/myawesomemind/index.html';
+                window.location.href = 'https://mateo-restrepo.github.io/myawesomebrain/index.html';
             }          
         } else{
             if(!validPassw){
